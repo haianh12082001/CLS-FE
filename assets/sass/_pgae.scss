@@ -1,0 +1,192 @@
+.recommendation-course{
+    .course-list{
+        padding: 40px 20px 10px 20px;
+    }
+    .course-item{
+        .instructor{
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+        .text-content{
+            transition: all .4s ease-out,
+        }
+        &:hover .text-content{
+            transform: translateY(-20px);
+        }
+    }   
+    .text-muted:hover{
+        text-decoration: underline;
+    }
+}
+
+
+//////articles/////
+.bg-white{
+    background: $white;
+}
+.section-page{
+    color: #222222;
+}
+.page-category{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.articles-hot{
+    img{
+        height: 300px;
+        width: 100%;
+    }
+    .item{
+        margin: 0 15px;
+        position: relative;
+        .content{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            color: #fff;
+            z-index: 2;
+            text-align: left;
+            padding: 1.3rem;
+        }
+        .name{
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+        .date{
+            color: #999;
+
+        }
+    }
+    .slick-dots{
+        display: flex !important;
+        justify-content: center;
+        padding: 20px 0;
+        background: $white;
+        margin: 0;
+        .slick-active button{
+            background: $black;
+            opacity: 1;
+        }
+        button{
+            background: $black;
+            opacity: 0.3;
+            color: transparent;
+            width: 7px;
+            height: 7px;
+            padding: 0;
+            margin-left: 24px;
+            border-radius: 50%;
+            // border: 1px solid #fff;
+            
+        }
+    }
+}
+
+.articles-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed $black;
+    img{
+        width: 223px;
+        height: 125px;
+        margin-right: 15px;
+    }
+    .name a{
+        font-weight: 500;
+        color: $black;
+        font-size: 20px;
+        @include text-truncate(2);
+        &:hover{
+            color: $color-main1;
+        }
+    }
+    .des{
+        color: #222222;
+        @include text-truncate(2);
+    }
+}
+.entry-meta{
+    margin: 16px 0;
+    color: $text-muted;
+    font-size: 14px;
+}
+.box-wraper{
+    border: 1px solid #d3d3d3;
+    margin-bottom: 16px;
+    .title{
+        border-bottom: 1px solid #d3d3d3;
+        padding: 0.8rem 1rem;
+        font-weight: 600;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+    
+}
+.list-category{
+    .cat-item{
+        padding: 0.8rem 1rem;
+        &::before{
+            content: "\2022";
+            color: #be9744;
+            font-weight: 700;
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.3rem;
+        }
+        a{
+            color: #000;
+            &:hover{
+                color: #be9744;
+            }
+        }
+    }
+}
+.recent-posts--item{
+    display: flex;
+    position: relative;
+    border-bottom: 0.5px solid #e5e5e5;
+    padding: 16px 0;
+    margin: 0.6rem 0;
+    &:hover::before{
+        transform: scaleX(1);
+        width: 100%;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        background: $black;
+        transition: all 0.4s;
+    }
+    img{
+        width: 97px;
+        height: 54px;
+        margin-right: 6px;
+    }
+    .name{
+        font-size: 14px;
+        color: $black;
+        font-weight: 500;
+        @include text-truncate(2);
+        &:hover{
+            color: $color-main1;
+        }
+    }
+}
+.article-detail{
+    &--img{
+        width: 100%;
+        height: 380px;
+    }
+    .name{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+}
